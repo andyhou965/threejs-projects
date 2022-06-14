@@ -1,6 +1,3 @@
-// Canvas
-const canvas = document.querySelector("canvas.webgl");
-
 // Sizes
 const sizes = {
   width: 800,
@@ -25,11 +22,14 @@ scene.add(cubeMesh);
 // Second Param: Aspect Ratio - The width of the render divied by the height of the render
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
 camera.position.z = 3;
+camera.position.x = 1;
 scene.add(camera);
 
 // Renderer
+const canvas = document.querySelector("canvas.webgl"); // get the canvas from html
 const renderer = new THREE.WebGLRenderer({
   canvas: canvas,
 });
 renderer.setSize(sizes.width, sizes.height);
+// Provide a scene and camera for rendering, it will show the scene from camera point of view
 renderer.render(scene, camera);

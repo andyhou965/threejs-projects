@@ -29,3 +29,9 @@
 - Different types
 
 ## RENDER
+
+- Render the scene from the camera point of view
+- Result drawn into a Canvas
+- A Canvas is a HTML element in which you chan draw stuff
+- Three.js will use WebGL to draw the render inside this canvas
+- You can create it or you can let Three.js do it
