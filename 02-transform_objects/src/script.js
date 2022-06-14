@@ -18,6 +18,9 @@ const cubeMaterial = new THREE.MeshBasicMaterial({
 });
 // Mesh Object
 const cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial);
+cubeMesh.position.x = 0.7;
+cubeMesh.position.y = -0.6;
+cubeMesh.position.z = 1;
 scene.add(cubeMesh);
 
 // Camera
@@ -35,4 +38,5 @@ const renderer = new THREE.WebGLRenderer({
 });
 renderer.setSize(sizes.width, sizes.height);
 // Provide a scene and camera for rendering, it will show the scene from camera point of view
+// "Rendering" like take pictures using camera
 renderer.render(scene, camera);
